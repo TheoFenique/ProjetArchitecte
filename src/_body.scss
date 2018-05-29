@@ -2,59 +2,55 @@
   width: 100%;
 }
 
-body{
-  margin : 0;
+.container{
+  width: 60%;
+  margin: 0 auto;
 }
 
+.firstWhiteDiv{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  h2{
+    margin-top: 30px;
+  }
 
-nav.menu{
-    background-color: $softBlack;
-    position: fixed;
-    width: 100vw;
-    justify-content: center;
-}
+  article{
 
-nav.menu ul{
-  display:flex;
-  flex-direction: row;
-  padding:0;
-}
-
-nav.menu{
-  display:flex;
-  flex-direction: row;
-}
-
-nav.menu ul li{
-  position:relative;
-  list-style: none;
-}
-
-nav.menu ul li a{
-  display: block;
-  padding: 15px 30px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition:all 0.15s ease-in;
-  color: white;
-  will-change:auto;
-}
-
-nav.menu ul li ul{
-  display: none;
-  position:absolute;
-  top: 100%;
-  left: 25px;
-  font-size: 12px;
-  width: auto;
-
-   li {
-    padding : 6px;
   }
 }
 
-nav.menu ul li:hover ul{
-  width: 120px;
-  display:block;
-  background-color: $softBlack;
+#drawing{
+  width: 55%;
+  background: grey;
+  height: 400px;
+}
+
+.whiteDivTxt{
+  width: 40%
+}
+
+//Project
+
+.projectsDiv{
+  display: flex;
+}
+
+#projectTitle{
+  justify-content: center;
+
+}
+
+.ourProjects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+  .project{
+    margin:10px;
+    width: 30%;
+    height: 350px;
+    background: orange;
+  }
 }

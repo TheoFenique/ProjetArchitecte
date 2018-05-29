@@ -1,8 +1,34 @@
 #homepic {
   width: 100%; }
 
-body {
-  margin: 0; }
+.container {
+  width: 60%;
+  margin: 0 auto; }
+
+.firstWhiteDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  .firstWhiteDiv h2 {
+    margin-top: 30px; }
+
+#drawing {
+  width: 55%;
+  background: grey;
+  height: 400px; }
+
+.whiteDivTxt {
+  width: 40%; }
+
+.ourProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .ourProjects .project {
+    margin: 10px;
+    width: 30%;
+    height: 350px;
+    background: orange; }
 
 nav.menu {
   background-color: rgba(29, 29, 29, 0.3);
@@ -46,5 +72,23 @@ nav.menu ul li:hover ul {
   width: 120px;
   display: block;
   background-color: rgba(29, 29, 29, 0.3); }
+
+body {
+  margin: 0;
+  scroll-behavior: smooth; }
+
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  background: #505050; }
+
+::-webkit-scrollbar-thumb {
+  background: #1d1d1d;
+  border-radius: 20px;
+  transition: all 0.5s ease-in; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d2d2d; }
 
 /*# sourceMappingURL=master.css.map */

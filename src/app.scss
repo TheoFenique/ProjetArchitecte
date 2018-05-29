@@ -1,2 +1,26 @@
 @import "config";
 @import "body";
+@import "header";
+
+body{
+  margin : 0;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgb(80, 80, 80);
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(29, 29, 29);
+  border-radius: 20px;
+  transition: all 0.5s ease-in;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(45, 45, 45);
+}
