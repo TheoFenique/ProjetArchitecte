@@ -4,58 +4,78 @@
     <meta charset="utf-8">
     <title>Dufourcq</title>
     <link rel="stylesheet" href="styles/master.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700,700i" rel="stylesheet">
   </head>
   <header>
-    <nav class="menu">
-      <ul>
-        <li> <a href="#">À propos </a>
-          <ul>
-            <li>Nav1</li>
-            <li>Nav2</li>
-            <li>Nav3</li>
-          </ul>
-        </li>
-        <li> <a href="#">Publications </a>
-          <ul>
-            <li>Nav1</li>
-            <li>Nav2</li>
-            <li>Nav3</li>
-          </ul>
-       </li>
-        <li> <a href="#">Créations </a>
-          <ul>
-            <li>Nav1</li>
-            <li>Nav2</li>
-            <li>Nav3</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <?php
+      include('templates/nav.php')
+    ?>
   </header>
   <body>
-    <img src="images/homepicture.png" alt="b" id="homepic">
+    <div class="accueil">
+      <img src="images/glasslab.png" alt="b" id="homepic">
+      <div class="about">
+        <h2>Glass Lab</h2>
+        <p>Florent Dufourcq, 2013<br/>
+          Corning Museum of Glass - Musée des Arts Décoratifs, Paris …</p>
+        <div class="more buton">
+          en savoir +
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="firstWhiteDiv">
-        <img id="drawing" src="drawing.png" alt="drawing architecture">
+        <img id="drawing" src="images/drawing.png" alt="drawing architecture">
         <div class="whiteDivTxt">
-          <h2>Loreeeeem</h2>
+          <h2>Le cabinet d'architecture</h2>
+          <div class="border"></div>
+          <p>"Architecture is our world"</p>
           <article>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Tous les deux diplômés de l’école Camondo en 2015 avec les félicitations du jury on a toujours rêvé de travailler ensemble Mais on s’est dit en sortant de l’école qu’il fallait qu’on acquière de l’expérience dans des agences avant de se lancer. Après avoir travaillé pendant 3 ans chacun de notre côté dans des agences d’architecture d’intérieur à Londres et Paris (Kim: chez Finch Interiors à Londres en 2015-2016 puis au studio CMP à paris depuis août 2016 / Florent chez Charlotte Biltgen en 2015-2017 puis chez Starck depuis septembre 2017) on a commencé à travailler ensemble à mi temps en janvier 2018 (avant on faisait que des projets de concours les weekends) et on espère avoir assez de projets pour bosser pour nous a plein temps et monter du coup une vraie agence. On a été sélectionnés par la villa Noailles pour un concours pour jeunes architectes d’intérieur qui chaque année permet à 10 architectes d’intérieur de réaliser leur projet dans un bâtiment à Toulon. Il y aura une couverture médiatique de cet événement et notre projet sera exposé de juin à septembre donc on espère que ça va nous amener des contacts et potentiellement des projets
           </article>
         </div>
       </div>
       <div class="projectsDiv">
-        <h2 id="projectTitle">Nos projets</h2>
+        <div class="flexContainer">
+          <h2>Nos projets</h2>
+        </div>
         <div class="ourProjects">
-          <img class="project" src="project1.png" alt="architecture project 1">
-          <img class="project" src="project2.png" alt="architecture project 2">
-          <img class="project" src="project3.png" alt="architecture project 3">
+          <img class="project" src="images/project1.png" alt="architecture project 1">
+          <img class="project" src="images/project2.png" alt="architecture project 2">
+          <img class="project" src="images/project3.png" alt="architecture project 3">
         </div>
       </div>
+      <div class="flexContainer">
+        <a href="#">
+          <div class="buton" id="projectButon">
+            + de projets
+          </div>
+        </a>
+      </div>
     </div>
-  <footer>
-    <?php include("src/php/footer.php") ?>
-  </footer>
+    <div class="homeContact">
+      <img class="homeContactPic" src="images/homeContactPic.png" alt="Contact">
+      <div class="flexContainer">
+          <h2>Contact</h2>
+      </div>
+      <div class="containerForm">
+        <form class="homeContactForm" action="index.html" method="post">
+          <div class="inputContainer">
+            <input type="text" name="name" placeholder="Nom*">
+            <input type="text" name="name" placeholder="Prénom*">
+            <input type="text" name="name" placeholder="Email*">
+            <input type="text" name="name" placeholder="Téléphone">
+            <textarea name="name" rows="8" cols="32">Message*</textarea>
+            <div class="flexContainer">
+              <input type="submit" id="submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <?php include("templates/footer.php") ?>
+    </footer>
+
   </body>
 </html>

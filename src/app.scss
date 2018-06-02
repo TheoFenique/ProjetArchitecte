@@ -1,26 +1,30 @@
 @import "config";
 @import "body";
-@import "header";
+
+html{
+  background-color: #f3f3f3;
+}
 
 body{
   margin : 0;
   scroll-behavior: smooth;
+  font-family: $mainFont;
 }
 
 ::-webkit-scrollbar{
-  width: 5px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track{
-  background: rgb(80, 80, 80);
+  background: #f3f3f3;
+
 }
 
 ::-webkit-scrollbar-thumb{
-  background: rgb(29, 29, 29);
-  border-radius: 20px;
+  background: rgb(84, 232, 168);
   transition: all 0.5s ease-in;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background: rgb(45, 45, 45);
+  background: rgb(93, 198, 152);
 }

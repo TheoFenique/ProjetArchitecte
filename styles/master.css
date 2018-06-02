@@ -2,93 +2,155 @@
   width: 100%; }
 
 .container {
-  width: 60%;
+  width: 75%;
   margin: 0 auto; }
+
+.border {
+  height: 7px;
+  width: 150px;
+  background: #232323; }
+
+.flexContainer {
+  display: flex;
+  text-align: center; }
+
+.accueil {
+  position: relative; }
+
+.buton {
+  text-transform: uppercase;
+  padding: 12px;
+  font-weight: bold; }
+
+.more {
+  position: absolute;
+  border: solid #FFFFFF 2px; }
+
+#projectButon {
+  border: solid #232323 2px;
+  margin: 0 auto; }
+
+.about {
+  position: absolute;
+  top: 75%;
+  left: 12.5%;
+  color: #FFFFFF; }
+  .about h2 {
+    font-size: 3em;
+    margin: 0; }
 
 .firstWhiteDiv {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px; }
+  margin: 50px 0 50px 0;
+  height: 600px; }
   .firstWhiteDiv h2 {
-    margin-top: 30px; }
+    margin: 30px 0 0  20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #232323; }
+  .firstWhiteDiv p {
+    margin-left: 20px;
+    font-weight: 300;
+    font-style: italic; }
+  .firstWhiteDiv article {
+    margin-left: 20px;
+    font-weight: 300; }
+  .firstWhiteDiv .border {
+    margin: 20px 0 20px 20px;
+    color: #232323; }
 
 #drawing {
-  width: 55%;
-  background: grey;
-  height: 400px; }
+  width: 68%; }
 
 .whiteDivTxt {
   width: 40%; }
 
+.projectsDiv {
+  margin: 50px 0 50px 0; }
+  .projectsDiv h2 {
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 2.5em; }
+
+#projectTitle {
+  margin: 50px auto; }
+
 .ourProjects {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
+  margin-top: 30px;
+  justify-content: space-between; }
   .ourProjects .project {
-    margin: 10px;
     width: 30%;
-    height: 350px;
-    background: orange; }
+    height: 30%; }
 
-nav.menu {
-  background-color: rgba(29, 29, 29, 0.3);
-  position: fixed;
-  width: 100vw;
-  justify-content: center; }
+.homeContact {
+  margin-top: 80px;
+  position: relative; }
+  .homeContact .homeContactPic {
+    width: 100%;
+    position: absolute;
+    z-index: -2; }
+  .homeContact h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #FFFFFF;
+    margin: 60px auto; }
 
-nav.menu ul {
+.containerForm {
+  margin: 0 auto;
+  width: 40%; }
+
+.inputContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center; }
+
+.homeContactForm input {
+  border: solid 1px #232323;
+  margin: 10px 0;
+  border-radius: 3px;
+  box-shadow: none;
+  height: 27px;
+  font-weight: bold;
+  padding-left: 20px;
+  width: 220px;
+  background-color: white; }
+
+.homeContactForm textarea {
+  border: solid 1px #232323;
+  border-radius: 3px;
+  box-shadow: none;
+  font-weight: bold;
+  width: 236px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #aaaaaa;
+  background-color: white; }
+
+#submit {
+  width: 60px;
   padding: 0; }
 
-nav.menu {
-  display: flex;
-  flex-direction: row; }
-
-nav.menu ul li {
-  position: relative;
-  list-style: none; }
-
-nav.menu ul li a {
-  display: block;
-  padding: 15px 30px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.15s ease-in;
-  color: white;
-  will-change: auto; }
-
-nav.menu ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 25px;
-  font-size: 12px;
-  width: auto; }
-  nav.menu ul li ul li {
-    padding: 6px; }
-
-nav.menu ul li:hover ul {
-  width: 120px;
-  display: block;
-  background-color: rgba(29, 29, 29, 0.3); }
+html {
+  background-color: #f3f3f3; }
 
 body {
   margin: 0;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-family: "Ubuntu"; }
 
 ::-webkit-scrollbar {
-  width: 5px; }
+  width: 7px; }
 
 ::-webkit-scrollbar-track {
-  background: #505050; }
+  background: #f3f3f3; }
 
 ::-webkit-scrollbar-thumb {
-  background: #1d1d1d;
-  border-radius: 20px;
+  background: #54e8a8;
   transition: all 0.5s ease-in; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d2d2d; }
+  background: #5dc698; }
 
 /*# sourceMappingURL=master.css.map */
