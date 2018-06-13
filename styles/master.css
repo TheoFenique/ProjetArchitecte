@@ -14,17 +14,70 @@
   display: flex;
   text-align: center; }
 
+nav.menu {
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.17); }
+
+nav.menu ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0; }
+
+nav.menu {
+  display: flex;
+  flex-direction: row;
+  font-family: Ubuntu; }
+
+nav.menu ul li {
+  position: relative;
+  list-style: none; }
+
+nav.menu ul li a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in;
+  background-color: white;
+  color: #aaaaaa;
+  will-change: auto; }
+
+nav.menu ul li a:hover {
+  background-color: white;
+  color: #232323; }
+
+nav.menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  font-size: 12px;
+  width: auto; }
+
+nav.menu ul li:hover ul {
+  width: 200px;
+  display: block; }
+
 .accueil {
   position: relative; }
 
 .buton {
   text-transform: uppercase;
   padding: 12px;
-  font-weight: bold; }
+  font-weight: bold;
+  text-decoration: none; }
 
 .more {
   position: absolute;
-  border: solid #FFFFFF 2px; }
+  border: solid #FFFFFF 2px;
+  color: white; }
+
+.linkProject {
+  text-decoration: none;
+  color: #000000; }
 
 #projectButon {
   border: solid #232323 2px;
@@ -125,12 +178,25 @@
   width: 236px;
   margin: 10px 0;
   font-weight: bold;
-  color: #aaaaaa;
-  background-color: white; }
+  background-color: white;
+  resize: none; }
 
 #submit {
   width: 60px;
   padding: 0; }
+
+.footerTab {
+  margin-top: 50px;
+  background: #232323;
+  display: flex;
+  justify-content: space-around;
+  height: 250px; }
+  .footerTab ul {
+    list-style: none;
+    color: white; }
+    .footerTab ul li {
+      font-weight: 400;
+      padding: 8px 0 8px 0; }
 
 html {
   background-color: #f3f3f3; }

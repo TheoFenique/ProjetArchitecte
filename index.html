@@ -8,7 +8,7 @@
   </head>
   <header>
     <?php
-      include('templates/nav.php')
+      include('templates/header.php')
     ?>
   </header>
   <body>
@@ -18,9 +18,11 @@
         <h2>Glass Lab</h2>
         <p>Florent Dufourcq, 2013<br/>
           Corning Museum of Glass - Musée des Arts Décoratifs, Paris …</p>
-        <div class="more buton">
-          en savoir +
-        </div>
+        <a href="#">
+          <div class="more buton">
+            en savoir +
+          </div>
+        </a>
       </div>
     </div>
     <div class="container">
@@ -46,7 +48,7 @@
         </div>
       </div>
       <div class="flexContainer">
-        <a href="#">
+        <a href="#" class="linkProject">
           <div class="buton" id="projectButon">
             + de projets
           </div>
@@ -65,7 +67,7 @@
             <input type="text" name="name" placeholder="Prénom*">
             <input type="text" name="name" placeholder="Email*">
             <input type="text" name="name" placeholder="Téléphone">
-            <textarea name="name" rows="8" cols="32">Message*</textarea>
+            <textarea name="name" rows="8" cols="32" placeholder="Message*"></textarea>
             <div class="flexContainer">
               <input type="submit" id="submit">
             </div>
@@ -74,8 +76,9 @@
       </div>
     </div>
     <footer>
-      <?php include("templates/footer.php") ?>
+      <?php
+        include('templates/footer.php')
+      ?>
     </footer>
-
   </body>
 </html>
