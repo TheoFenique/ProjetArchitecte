@@ -1,4 +1,4 @@
-#homepic {
+.homepic {
   width: 100%; }
 
 .container {
@@ -13,6 +13,25 @@
 .flexContainer {
   display: flex;
   text-align: center; }
+
+#rightArrow {
+  position: absolute;
+  z-index: 20000;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 2%;
+  transform: rotate(90deg); }
+
+#leftArrow {
+  position: absolute;
+  position: absolute;
+  z-index: 20000;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 95%;
+  transform: rotate(270deg); }
 
 nav.menu {
   background-color: white;
@@ -61,7 +80,7 @@ nav.menu ul li:hover ul {
   width: 200px;
   display: block; }
 
-.accueil {
+.sliderContainer {
   position: relative; }
 
 .buton {
@@ -175,7 +194,7 @@ nav.menu ul li:hover ul {
   border-radius: 3px;
   box-shadow: none;
   font-weight: bold;
-  width: 236px;
+  width: 237px;
   margin: 10px 0;
   font-weight: bold;
   background-color: white;
@@ -197,6 +216,18 @@ nav.menu ul li:hover ul {
     .footerTab ul li {
       font-weight: 400;
       padding: 8px 0 8px 0; }
+
+.sliderContainer {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-size: cover; }
+
+.homepic {
+  min-width: 100vw;
+  min-height: 800px;
+  transition: all ease-in-out 0.65s; }
 
 html {
   background-color: #f3f3f3; }

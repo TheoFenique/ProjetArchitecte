@@ -7,13 +7,49 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700,700i" rel="stylesheet">
   </head>
   <header>
-    <?php
-      include('templates/header.php')
-    ?>
+    <nav class="menu">
+      <ul>
+        <li>
+        <a href="#" title="Acceuil">Accueil</a>
+          <ul>
+            <li><a href="#">Page d'acceuil</a></li>
+            <li><a href="#">Liste des articles</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="news">News</a>
+          <ul>
+            <li><a href="#">Tout savoir sur la Nasa</a></li>
+            <li><a href="#">Liste des actualités</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Forum">Forum</a>
+          <ul>
+            <li><a href="#">Acceder aux forums</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Plus">Plus</a>
+          <ul>
+            <li><a href="#">Mentions legales</a></li>
+            <li><a href="#">A propos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Connexion" id="connexion">Connexion</a>
+        </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
+
   <body>
-    <div class="accueil">
-      <img src="images/glasslab.png" alt="b" id="homepic">
+    <div class="sliderContainer">
+      <img src="images/glasslab.png" alt="b" class="homepic firstPic">
+      <img src="images/glasslab.png" alt="b" class="homepic secondPic">
+      <img src="images/glasslab.png" alt="b" class="homepic thirdPic">
       <div class="about">
         <h2>Glass Lab</h2>
         <p>Florent Dufourcq, 2013<br/>
@@ -25,6 +61,9 @@
         </a>
       </div>
     </div>
+    <img class="arrow" id="rightArrow" src="images/arrow.png" alt="fleches">
+    <img class="arrow" id="leftArrow" src="images/arrow.png" alt="fleches">
+    <script src="scripts/app.js"></script>
     <div class="container">
       <div class="firstWhiteDiv">
         <img id="drawing" src="images/drawing.png" alt="drawing architecture">
