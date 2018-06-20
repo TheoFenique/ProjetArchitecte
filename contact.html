@@ -39,7 +39,7 @@
           <div class="global">
             <div class="background">
             </div>
-            <form  action="inscrition.php" method="post">
+            <form  action="inscription.php" method="post" name="inscription">
               <div class="inputs">
                 <div class="name">
                   <label for="name"></label>
@@ -51,18 +51,24 @@
                 </div>
                 <div class="phone">
                   <label for="phone"></label>
-                  <input class="phonecase" type="text" name="phone" id="phone" placeholder="Téléphone*">
+                  <input class="phonecase" type="phone" name="phone" id="phone" placeholder="Téléphone*">
                 </div>
                 <div class="email">
                   <label for="email"></label>
-                  <input class="emailcase" type="text" name="email" id="email" placeholder="Votre email*">
+                  <input class="emailcase" type="email" name="email" id="email" placeholder="Votre email*">
                 </div>
                 <div class="message">
                   <textarea class="messagecase" name="message" rows="6" cols="80" placeholder="Laisser nous un message !"></textarea>
                 </div>
-                <button class="button" type="send">Send</button>
+                <button class="button" type="submit" name="mailform">Send</button>
               </div>
             </form>
+            <?php
+            if(isset($msg))
+            {
+              echo $msg;
+            }
+            ?>
             <div class="info">
               <p id="infos"> INFORMATIONS </p>
               <div class="about1">
@@ -91,7 +97,7 @@
 
 
     </div>
-    <script src="scripts/scripts/hamburger.js">
+    <script src="scripts/hamburger.js">
     </script>
   </body>
 </html>

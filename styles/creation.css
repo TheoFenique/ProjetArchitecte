@@ -1,3 +1,18 @@
+body {
+  margin: 0 auto;
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/***************************************
+
+                Nav bar
+
+***************************************/
+
+.menu {
+  font-size: 0.9rem;
+}
 
 nav.menu {
   display: flex;
@@ -11,7 +26,6 @@ nav.menu {
 
 nav.menu ul {
   padding: 0;
-  font-size: 62.5%
 }
 
 nav.menu ul li {
@@ -46,11 +60,69 @@ nav.menu ul li ul {
   width: auto;
 }
 
-body {
-  margin: 0 auto;
-  font-size: 62.5%;
-  font-family: 'Ubuntu', sans-serif;
+/***************************************
+
+            Menu Hamburger
+
+***************************************/
+
+.menuToggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 1rem;
+  right: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  width: 2.6rem;
+  z-index: 2;
 }
+
+.menuToggle:hover { opacity: 0.8; }
+
+.menuToggle .menuToggle-bar,  .menuToggle .menuToggle-bar::after,  .menuToggle .menuToggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: black;
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+}
+
+.menuToggle .menuToggle-bar { margin-top: 0; }
+
+.menuToggle .menuToggle-bar::after { margin-top: 0.8rem; }
+
+.menuToggle .menuToggle-bar::before { margin-top: -0.8rem; }
+
+.menuToggle.expanded .menuToggle-bar { background: transparent; }
+
+.menuToggle.expanded .menuToggle-bar::after, .menuToggle.expanded .menuToggle-bar::before {
+  background: black;
+  margin-top: 0;
+}
+
+.menuToggle.expanded .menuToggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuToggle.expanded .menuToggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 
 /*title */
 
@@ -77,6 +149,7 @@ main {
   box-sizing: border-box;
   width: 60%;
   margin: 0 auto;
+  font-size: 0.9rem;
 }
 h2{
   font-size: 1.4rem;
@@ -302,3 +375,57 @@ h2{
     .footerTab ul li {
       font-weight: 400;
       padding: 8px 0 8px 0; }
+
+
+@media all and (min-width: 414px)
+{
+  .menuToggle {
+    display: none;
+  }
+}
+
+@media all and (max-width: 478px)
+{
+  h1 {
+    margin-top: 17%;
+  }
+
+  /* La nav disparait et le menu hamburger apparait */
+  .menu {
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+    -ms-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+    background: #28dde0;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    left: -30rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .menu.expanded { left: 0; }
+
+  .menu ul {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.menu ul li {
+    display: flex;
+    flex-direction: column;
+  }
+
+   .menuToggle {
+     display:block;
+   }
