@@ -20,13 +20,10 @@ h5{
 }
 
 /***************************************
-
                 Nav bar
-
 ***************************************/
-.menu {
-  font-size: 0.9rem;
-}
+
+
 nav.menu {
   display: flex;
   justify-content: center;
@@ -74,9 +71,7 @@ nav.menu ul li ul {
 }
 
 /***************************************
-
             Menu Hamburger
-
 ***************************************/
 
 .menuToggle {
@@ -137,9 +132,7 @@ nav.menu ul li ul {
 }
 
 /***************************************
-
                 Main page
-
 ***************************************/
 
 .homepic {
@@ -176,47 +169,6 @@ nav.menu ul li ul {
   top: 50%;
   left: 95%;
   transform: rotate(270deg); }
-
-nav.menu {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.17); }
-
-nav.menu ul {
-  padding: 0;
-  font-size: 62.5%; }
-
-nav.menu ul li {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  list-style: none; }
-
-nav.menu ul li a {
-  display: block;
-  padding: 10px 30px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.15s ease-in;
-  background-color: white;
-  color: #aaaaaa;
-  will-change: auto; }
-
-nav.menu ul li a:hover {
-  background-color: white;
-  color: #232323; }
-
-nav.menu ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  font-size: 12px;
-  width: auto; }
 
 .sliderContainer {
   position: relative; }
@@ -395,14 +347,6 @@ nav.menu ul li ul {
   min-height: 800px;
   transition: all ease-in-out 0.65s; }
 
-html {
-  background-color: #f3f3f3; }
-
-body {
-  margin: 0;
-  scroll-behavior: smooth;
-  font-family: "Ubuntu"; }
-
 ::-webkit-scrollbar {
   width: 7px; }
 
@@ -425,8 +369,9 @@ body {
 }
 @media all and (max-width: 478px)
 {
-  h1 {
-    margin-top: 17%;
+  .container {
+    width: 100%;
+    margin: 0 auto;
   }
   /* La nav disparait et le menu hamburger apparait */
   .menu {
@@ -462,6 +407,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
    .menuToggle {
      display:block;
    }
@@ -470,7 +416,145 @@ body {
      display: none;
    }
 
-@media all and (max-width: 768px)
-{
+   div.border {
+     display: none;
+   }
 
-/*# sourceMappingURL=master.css.map */
+   .sliderContainer {
+     width: 100%;
+   }
+
+   .homepic {
+     min-width: 100vw;
+     min-height: 400px;
+     transition: all ease-in-out 0.65s;
+   }
+
+   .footerTab {
+     margin-top: 50px;
+     background: #232323;
+     display: inline-block;
+     height: 250px; }
+     .footerTab ul {
+       list-style: none;
+       color: white; }
+       .footerTab ul li {
+         font-weight: 400;
+         padding: 8px 0 8px 0;
+    }
+
+    #leftArrow {
+      position: absolute;
+      z-index: 20000;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 2%;
+      transform: rotate(90deg); }
+
+    #rightArrow {
+      position: absolute;
+      position: absolute;
+      z-index: 20000;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 95%;
+      transform: rotate(270deg); }
+
+    .firstWhiteDiv {
+      display: block;
+      height: 600px;
+    }
+      .firstWhiteDiv #drawing{
+        display: flex;
+        justify-content: center;
+        width:100vw;
+      }
+      .firstWhiteDiv h2 {
+        margin: 30px 0 10px 10px;
+        text-align: center;
+        width: 100vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #232323;
+      }
+      .firstWhiteDiv p {
+        margin: 10px 0 20px 10px;
+        text-align: center;
+        width: 100vw;
+        font-weight: 300;
+        font-style: italic;
+      }
+      .firstWhiteDiv article {
+        margin: 10px;
+        width: 100vw;
+        font-weight: 300;
+        line-height: 1.2rem;
+      }
+      .firstWhiteDiv .border {
+        margin: 20px 0 20px 20px;
+        color: #232323;
+      }
+
+}
+
+
+@media all and (max-width: 1200px)
+{
+  .container {
+    width: 100%;
+    margin: 0 auto; }
+
+  .firstWhiteDiv {
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+  .firstWhiteDiv #drawing{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  .firstWhiteDiv h2 {
+    margin: 30px 0px 10px 40px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #232323;
+  }
+  .firstWhiteDiv p {
+    margin: 10px 0 20px 40px;
+    width: 100%;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .firstWhiteDiv article {
+    margin: 40px;
+    width: 90vw;
+    font-weight: 300;
+    line-height: 1.2rem;
+  }
+  .firstWhiteDiv .border {
+    margin: 20px 0 20px 40px;
+    color: #232323;
+  }
+
+  .btn-cont .btnBlack {
+    left: 0;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projectsDiv {
+    margin: 40vw 0 50px 0; }
+    .projectsDiv h3 {
+      display: block;
+      margin: auto;
+      text-transform: uppercase;
+      margin: 0 auto;
+      font-size: 2.5em; }
+}
