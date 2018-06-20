@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-#rightArrow{
+#leftArrow{
   position: absolute;
   z-index: 20000;
   width:50px;
@@ -31,7 +31,7 @@
 
 }
 
-#leftArrow{
+#rightArrow{
   position: absolute;
   position: absolute;
   z-index: 20000;
@@ -109,6 +109,12 @@ nav.menu ul li ul {
   position: absolute;
   border: solid $white 2px;
   color: white;
+  transition: all ease-in 0.2s
+}
+
+.more:hover{
+  color: rgb(215, 215, 215);
+  border: solid rgb(215, 215, 215) 2px;
 }
 
 .linkProject{
@@ -119,6 +125,12 @@ nav.menu ul li ul {
 #projectButon{
   border: solid $matteBlack 2px;
   margin: 0 auto;
+  transition: all ease-in 0.2s;
+}
+
+#projectButon:hover{
+  color: rgb(97, 97, 97);
+  border: solid rgb(97, 97, 97) 2px;
 }
 
 .about{
@@ -126,11 +138,33 @@ nav.menu ul li ul {
   top: 75%;
   left: 12.5%;
   color: $white;
+  display: none;
+  transition: all ease-in 0.65s;
+
   h2{
     font-size: 3em;
     margin : 0;
   }
 }
+
+.about.active{display:block;}
+
+.quote{
+  display:block;
+  margin: 0 auto;
+  background: $matteBlack;
+  color: white;
+  font-family: 'Ubuntu';
+  text-align: center;
+  font-weight: 700;
+  padding: 30px;
+
+  span{
+    font-weight: 200;
+    font-style: italic;
+  }
+}
+
 
 .firstWhiteDiv{
   display: flex;

@@ -14,7 +14,7 @@
   display: flex;
   text-align: center; }
 
-#rightArrow {
+#leftArrow {
   position: absolute;
   z-index: 20000;
   width: 50px;
@@ -23,7 +23,7 @@
   left: 2%;
   transform: rotate(90deg); }
 
-#leftArrow {
+#rightArrow {
   position: absolute;
   position: absolute;
   z-index: 20000;
@@ -86,7 +86,12 @@ nav.menu ul li ul {
 .more {
   position: absolute;
   border: solid #FFFFFF 2px;
-  color: white; }
+  color: white;
+  transition: all ease-in 0.2s; }
+
+.more:hover {
+  color: #d7d7d7;
+  border: solid #d7d7d7 2px; }
 
 .linkProject {
   text-decoration: none;
@@ -94,16 +99,39 @@ nav.menu ul li ul {
 
 #projectButon {
   border: solid #232323 2px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: all ease-in 0.2s; }
+
+#projectButon:hover {
+  color: #616161;
+  border: solid #616161 2px; }
 
 .about {
   position: absolute;
   top: 75%;
   left: 12.5%;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  display: none;
+  transition: all ease-in 0.65s; }
   .about h2 {
     font-size: 3em;
     margin: 0; }
+
+.about.active {
+  display: block; }
+
+.quote {
+  display: block;
+  margin: 0 auto;
+  background: #232323;
+  color: white;
+  font-family: 'Ubuntu';
+  text-align: center;
+  font-weight: 700;
+  padding: 30px; }
+  .quote span {
+    font-weight: 200;
+    font-style: italic; }
 
 .firstWhiteDiv {
   display: flex;
