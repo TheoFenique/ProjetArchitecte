@@ -2,21 +2,34 @@
 
 let leftArrow = document.querySelector('#leftArrow')
 let rightArrow = document.querySelector('#rightArrow')
+let firstImage = document.querySelector('.firstPic')
+let secondImage = document.querySelector('.secondPic')
+let thirdImage = document.querySelector('.thirdPic')
+let current = 0
+let position = [0, 100, 200]
+let intervalNextSlide = setInterval(nextSlide, 6000)
+let intervalNextTxt = setInterval(nextTxt, 6000)
+
+function slide(){
+  firstImage.style.transform = `translateX(-${position[current]}vw)`
+  secondImage.style.transform = `translateX(-${position[current]}vw)`
+  thirdImage.style.transform = `translateX(-${position[current]}vw)`
+}
+
+function nextSlide(){
+  current++
+  if(current > 2){current = 0}
+  slide()
+}
 
 function slider(){
-  let firstImage = document.querySelector('.firstPic')
-  let secondImage = document.querySelector('.secondPic')
-  let thirdImage = document.querySelector('.thirdPic')
-  let current = 0
-  position = [0, 100, 200]
   rightArrow.addEventListener(
     'click',
     function(){
       current ++
-      if(current == 3){current--}
-      firstImage.style.transform = `translateX(-${position[current]}vw)`
-      secondImage.style.transform = `translateX(-${position[current]}vw)`
-      thirdImage.style.transform = `translateX(-${position[current]}vw)`
+      if(current > 2){current = 0}
+      slide()
+      console.log(current)
     },
     true
   )
@@ -24,47 +37,48 @@ function slider(){
     'click',
     function(){
       current --
-      if(current == -1){current++}
-      firstImage.style.transform = `translateX(-${position[current]}vw)`
-      secondImage.style.transform = `translateX(-${position[current]}vw)`
-      thirdImage.style.transform = `translateX(-${position[current]}vw)`
+      if(current < 0){current = 2}
+      slide()
+      console.log(current)
     },
     true
   )
-
 }
 
 slider()
 
+////////////////////////
+//Text opacity control//
+////////////////////////
 
-//Text opacity control
+let elements = document.querySelectorAll('.about')
+
+function nextTxt(){
+  for(let i = 0; i < elements.length; i++){
+    elements[i].classList.remove('active')
+  }
+  elements[current].classList.add('active')
+}
 
 function opacityControl(){
-  elements = document.querySelectorAll('.about')
-  let current = 0
   rightArrow.addEventListener(
     'click',
     function(){
-      current++
-      if(current == 3){current--}
       for(let i = 0; i < elements.length; i++){
         elements[i].classList.remove('active')
       }
       elements[current].classList.add('active')
-      console.log(current)
-
     }
   )
+
   leftArrow.addEventListener(
     'click',
     function(){
-      current--
-      if(current == -1){current++}
       for(let i = 0; i < elements.length; i++){
         elements[i].classList.remove('active')
       }
       elements[current].classList.add('active')
-      console.log(current)
+
 
     }
   )
