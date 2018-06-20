@@ -9,13 +9,23 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+h4{
+  font-size : 1.3rem;
+  margin: 0;
+}
+
+h5{
+  font-size : 1.1rem;
+  margin: 0;
+}
+
 /***************************************
 
                 Nav bar
 
 ***************************************/
 .menu {
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 nav.menu {
   display: flex;
@@ -319,7 +329,7 @@ nav.menu ul li ul {
     width: 100%;
     position: absolute;
     z-index: -2; }
-  .homeContact h5 {
+  .homeContact h3 {
     text-transform: uppercase;
     font-size: 3em;
     color: #FFFFFF;

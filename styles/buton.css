@@ -1,16 +1,12 @@
-body {
-  height: 100%;
-  width: 100%;
-  background-color: black;
-}
-
 .btn-cont {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 27px;
+
 }
 .btn-cont .btn {
   position: relative;
-  padding: 20px 70px;
+  left: -105px;
+  padding: 10px 50px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
@@ -20,6 +16,23 @@ body {
   letter-spacing: 2px;
   -webkit-font-smoothing: antialiased;
 }
+
+.btn-cont .btnBlack {
+  position: relative;
+  left: -105px;
+  padding: 10px 50px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  font-size: 1.125em;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
 .btn-cont .btn:hover {
   border: none;
 }
@@ -39,7 +52,7 @@ body {
   -webkit-animation: move4 1500ms infinite ease;
           animation: move4 1500ms infinite ease;
 }
-.btn-cont .line-1 {
+.btn-cont .line-1{
   content: "";
   display: block;
   position: absolute;
@@ -75,6 +88,48 @@ body {
   right: 0;
   bottom: 0;
 }
+
+
+}
+.btn-cont .btnBlack .line-1{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+}
+.btn-cont .btnBlack .line-2 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  left: 0;
+  top: 0;
+}
+.btn-cont .btnBlack .line-3 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: black;
+  right: 0;
+  top: 0;
+}
+.btn-cont .btnBlack .line-4 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  right: 0;
+  bottom: 0;
+}
+
+
+
 
 @-webkit-keyframes move1 {
   0% {
