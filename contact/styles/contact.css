@@ -1,0 +1,564 @@
+body {
+  margin: 0 auto;
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/***************************************
+
+                Nav bar
+
+***************************************/
+
+.menu {
+  font-size: 0.9rem;
+}
+
+nav.menu {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.17);
+}
+
+nav.menu ul {
+  padding: 0;
+}
+
+nav.menu ul li {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  list-style: none;
+}
+
+nav.menu ul li a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in;
+  background-color: white;
+  color: #aaaaaa;
+  will-change: auto;
+}
+
+nav.menu ul li a:hover {
+  background-color: white;
+  color: #232323;
+}
+
+nav.menu ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  font-size: 12px;
+  width: auto;
+}
+
+
+/***************************************
+
+            Menu Hamburger
+
+***************************************/
+
+.menuToggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 1rem;
+  right: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  width: 2.6rem;
+  z-index: 2;
+}
+
+.menuToggle:hover { opacity: 0.8; }
+
+.menuToggle .menuToggle-bar,  .menuToggle .menuToggle-bar::after,  .menuToggle .menuToggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: white;
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+}
+
+.menuToggle .menuToggle-bar { margin-top: 0; }
+
+.menuToggle .menuToggle-bar::after { margin-top: 0.8rem; }
+
+.menuToggle .menuToggle-bar::before { margin-top: -0.8rem; }
+
+.menuToggle.expanded .menuToggle-bar { background: transparent; }
+
+.menuToggle.expanded .menuToggle-bar::after, .menuToggle.expanded .menuToggle-bar::before {
+  background: black;
+  margin-top: 0;
+}
+
+.menuToggle.expanded .menuToggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuToggle.expanded .menuToggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+/***************************************
+
+                Header
+
+***************************************/
+
+/*
+  Caractéristiques de la div container, qui englobe toute la page
+*/
+.container {
+  display: flex;
+  width: 100%;
+  height: 885px;
+  flex-direction: column;
+  background-image: url("../images/map.png");
+}
+
+/*
+  Caractéristiques du titre "Contacter-nous"
+*/
+h1 {
+  width: 100%;
+  font-size: 5em;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 8%;
+  justify-content: center;
+  color: white;
+}
+
+/*
+  Caractéristiques du formulaire
+*/
+.formulaire{
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+/***************************************
+
+                Main
+
+***************************************/
+
+/*
+  Texte "Envoyez-nous un message"
+*/
+#top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+}
+
+/*
+  Div englobant le formulaire et la partie info
+*/
+.global {
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
+
+/*
+  Caractéristiques du formulaire
+*/
+form {
+  width: 40%;
+  background-color: white;
+  margin-left: 60px;
+}
+
+label {
+  display: block;
+}
+
+/*
+  Classe regroupant les caractéristiques de la div des entrées du formulaire
+*/
+.inputs {
+  width: 80%;
+  margin-top: 20px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/*
+  Ci-dessous, les caractéristiques de chaque entrée du formulaire
+*/
+.name {
+  width : 50%;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.namecase {
+  width : 45%;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.surname {
+  width : 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 35px;
+}
+
+.surnamecase {
+  width: 45%;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.phone {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 35px;
+}
+
+.phonecase {
+  width: 45%;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.email {
+  width : 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emailcase {
+  width: 45%;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 35px;
+}
+
+.message {
+  width : 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.messagecase {
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 100%;
+}
+
+.button{
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  width: 130px;
+  height: 40px;
+}
+
+
+/***************************************
+
+                Bord droit
+
+***************************************/
+
+/*
+  Classe de la div info
+*/
+.info {
+  width: 20%;
+  height: 450px;
+  background-color: #2F4F4F;
+  color: white;
+  margin-right: 60px;
+}
+
+.info p{
+  display: flex;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+/*
+  Titre de la div info
+*/
+#infos {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-top: 25px;
+}
+
+/*
+  Texte citant les caractéristiques du client (email, téléphone)
+*/
+.about1 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: .7rem;
+  margin-left: 45px;
+  margin-top: 25px;
+}
+
+.about2{
+  display: flex;
+  justify-content: flex-start;
+  font-size: .7rem;
+  margin-left: 45px;
+}
+
+img {
+  width : 20px;
+  height : 20px;
+  margin-right: 10px;
+  margin-top: 7.5px;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+}
+
+#social {
+  margin-top: 35px;
+  font-size: 1rem;
+}
+
+
+/***************************************
+
+                Footer
+
+***************************************/
+
+
+/***************************************
+
+              Responsive
+
+***************************************/
+
+@media all and (min-width: 414px)
+{
+  .menuToggle {
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 1000px)
+{
+  .info {
+    width: 40%;
+    height: 450px;
+    background-color: #2F4F4F;
+    color: white;
+    margin-right: 20px;
+  }
+
+  form {
+    width: 80%;
+    background-color: white;
+    margin-left: 20px;
+  }
+
+}
+
+@media all and (max-width: 478px)
+{
+  h1 {
+    margin-top: 17%;
+  }
+
+  /* La nav disparait et le menu hamburger apparait */
+  .menu {
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+    -ms-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+    background: #28dde0;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    left: -30rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .menu.expanded { left: 0; }
+
+  .menu ul {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.menu ul li {
+    display: flex;
+    flex-direction: column;
+  }
+
+   .menuToggle {
+     display:block;
+   }
+
+
+   /* Le formulaire et les infos se chevauchent pour un format portable*/
+   .global {
+     display: block;
+     width: 100%;
+   }
+
+  form {
+    width: 90%;
+    background-color: white;
+    margin: 0 20px 0 20px;
+  }
+
+  .inputs {
+    width: 93%;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .name {
+    width : 91%;
+    margin-bottom: 35px;
+    margin-top: 10px;
+  }
+
+  .namecase {
+    width : 100%;
+    margin-left: -27px;
+  }
+
+  .surname {
+    width : 100%;
+    margin-bottom: 35px;
+  }
+
+  .surnamecase {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .phone {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+  }
+
+  .phonecase {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .email {
+    width : 100%;
+  }
+
+  .emailcase {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 35px;
+  }
+
+  .message {
+    width : 100%;
+    margin-bottom: 35px;
+  }
+
+  .messagecase {
+    width: 100%;
+    height: 45px;
+  }
+
+  .button{
+    width: 130px;
+    height: 40px;
+  }
+
+  .info {
+    width: 100%;
+    height: 300px;
+    background-color: #2F4F4F;
+    color: white;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+
+  .about1 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: .7rem;
+  }
+
+  .about2{
+    display: flex;
+    justify-content: flex-start;
+  }
+}
