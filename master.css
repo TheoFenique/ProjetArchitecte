@@ -320,20 +320,28 @@ nav.menu ul li ul {
 
 #submit {
   width: 60px;
-  padding: 0; }
+  padding: 0;
+}
 
 .footerTab {
-  margin-top: 50px;
-  background: #232323;
-  display: flex;
-  justify-content: space-around;
-  height: 250px; }
-  .footerTab ul {
-    list-style: none;
-    color: white; }
-    .footerTab ul li {
-      font-weight: 400;
-      padding: 8px 0 8px 0; }
+    width: 100%;
+    margin-top: 50px;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    height: 250px; }
+    @media screen and (max-width: 640px) {
+      .footerTab {
+        width: 100%;
+        height: 100%;
+        text-align: center;} }
+        .footerTab ul {
+          list-style: none;
+          color: white; }
+          .footerTab ul li {
+            font-weight: 400;
+            padding: 8px 0 8px 0;}
+
 
 .sliderContainer {
   overflow-x: hidden;
@@ -361,7 +369,7 @@ nav.menu ul li ul {
   background: #5dc698;
 }
 
-@media only screen and (max-width: 1200px)
+@media all and (max-width: 1200px)
 {
   .container {
     width: 100%;
@@ -418,15 +426,29 @@ nav.menu ul li ul {
       font-size: 2.5em; }
 }
 
-@media only screen and (max-width: 810px)
+@media all and (max-width: 810px)
 {
   .projectsDiv {
     display: block;
     margin: 80vw 0 50px 0;
   }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  #rightArrow {
+    position: absolute;
+    position: absolute;
+    z-index: 20000;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 90%;
+    transform: rotate(270deg); }
+
 }
 
-@media only screen and (max-width: 500px)
+@media all and (max-width: 500px)
 {
   .container {
     width: 100%;
@@ -493,7 +515,7 @@ nav.menu ul li ul {
      margin-top: 50px;
      background: #232323;
      display: inline-block;
-     height: 250px; }
+     height: 500px; }
      .footerTab ul {
        list-style: none;
        color: white; }
@@ -561,19 +583,24 @@ nav.menu ul li ul {
         margin: 100vw 0 50px 0;
       }
 
-      .menuToggle {
-        display: none;
-      }
+      .homeContact {
+        margin-top: 80px;
+        position: relative; }
+        .homeContact .homeContactPic {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: -2; }
 
 }
-@media only screen and (min-width: 499px)
+@media all and (min-width: 500px)
 {
   .menuToggle {
     display: none;
   }
 }
 
-@media only screen and (max-width: 414px)
+@media all and (max-width: 415px)
 {
   .projectsDiv {
     display: block;
@@ -586,11 +613,18 @@ nav.menu ul li ul {
     display: flex;
     justify-content: center;
   }
+}
+
+@media all and (max-width: 375px)
+{
+  .projectsDiv {
+    display: block;
+    margin: 190vw 0 50px 0;
+  }
 
 
 }
-
-@media only screen and (max-width: 320px)
+@media all and (max-width: 320px)
 {
   .projectsDiv {
     display: block;
