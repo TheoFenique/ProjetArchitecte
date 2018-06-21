@@ -406,7 +406,7 @@ img {
     margin-top: 50px;
     background: #232323;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 250px; }
     @media screen and (max-width: 640px) {
      .footerTab {
@@ -603,7 +603,7 @@ img {
     padding-top: 30px;
     background: #232323;
     display: inline-block;
-    height: 700px; }
+    height: 500px; }
     .footerTab ul {
       list-style: none;
       color: white;

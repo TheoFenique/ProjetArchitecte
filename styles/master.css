@@ -329,7 +329,7 @@ nav.menu ul li ul {
     margin-top: 50px;
     background: #232323;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 250px; }
     @media screen and (max-width: 640px) {
       .footerTab {
