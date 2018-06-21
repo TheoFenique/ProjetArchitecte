@@ -368,7 +368,8 @@ h2{
   height: 250px; }
   .footerTab ul {
     list-style: none;
-    color: white; }
+    color: white;
+    margin-left: -40px }
     .footerTab ul li {
       font-weight: 400;
       padding: 8px 0 8px 0; }
