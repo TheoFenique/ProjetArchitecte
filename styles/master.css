@@ -583,6 +583,15 @@ nav.menu ul li ul {
         margin: 100vw 0 50px 0;
       }
 
+      .homeContact {
+        margin-top: 80px;
+        position: relative; }
+        .homeContact .homeContactPic {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: -2; }
+
 }
 @media all and (min-width: 500px)
 {
