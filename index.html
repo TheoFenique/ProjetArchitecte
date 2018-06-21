@@ -3,30 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Cabinet d'architectes Haddou-Dufourcq</title>
-    <link rel="stylesheet" href="styles/buton.css">
+    <meta name="description" content="Site d'architecture"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/button.css">
     <link rel="stylesheet" href="styles/master.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,700,700i" rel="stylesheet">
   </head>
+
+
   <header>
+    <div class="menuToggle">
+      <div class="menuToggle-bar"></div>
+    </div>
     <nav class="menu">
       <ul>
         <li>
+          <a href="#" title="Acceuil">Acceuil</a>
           <a id="hover" href="#" title="A propos">À propos</a>
           <a href="#" title="Créations">Créations</a>
-          <a href="#" title="Publications">Publications</a>
           <a href="contact.html" title="Plus">Contact</a>
-          <a href="#">Évènements</a>
         </li>
       </ul>
     </nav>
   </header>
+
+
   <body>
     <div class="sliderContainer">
       <img src="images/homepic.png" alt="b" class="homepic firstPic">
       <img src="images/glasslab.png" alt="b" class="homepic secondPic">
       <img src="images/seposer.png" alt="b" class="homepic thirdPic">
         <div class="about active">
-          <h4>Cabinet D'architectes</h4>
+          <h4>Cabinet d'architectes</h4>
           <p>Florent Dufourcq, 2013</p>
           <p>Corning Museum of Glass - Musée des Arts Décoratifs, Paris …</p>
           <div class='btn-cont'>
@@ -158,10 +166,6 @@
           <li>Me contacter</li>
         </ul>
       </div>
-
-      <?php
-        include('templates/footer.php')
-      ?>
     </footer>
   </body>
 </html

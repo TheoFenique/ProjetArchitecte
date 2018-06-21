@@ -320,20 +320,28 @@ nav.menu ul li ul {
 
 #submit {
   width: 60px;
-  padding: 0; }
+  padding: 0;
+}
 
 .footerTab {
-  margin-top: 50px;
-  background: #232323;
-  display: flex;
-  justify-content: space-around;
-  height: 250px; }
-  .footerTab ul {
-    list-style: none;
-    color: white; }
-    .footerTab ul li {
-      font-weight: 400;
-      padding: 8px 0 8px 0; }
+    width: 100%;
+    margin-top: 50px;
+    background: #232323;
+    display: flex;
+    justify-content: center;
+    height: 250px; }
+    @media screen and (max-width: 640px) {
+      .footerTab {
+        width: 100%;
+        height: 100%;
+        text-align: center;} }
+        .footerTab ul {
+          list-style: none;
+          color: white; }
+          .footerTab ul li {
+            font-weight: 400;
+            padding: 8px 0 8px 0;}
+
 
 .sliderContainer {
   overflow-x: hidden;
@@ -361,13 +369,86 @@ nav.menu ul li ul {
   background: #5dc698;
 }
 
-@media all and (min-width: 414px)
+@media all and (max-width: 1200px)
 {
-  .menuToggle {
+  .container {
+    width: 100%;
+    margin: 0 auto; }
+
+  .firstWhiteDiv {
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+  .firstWhiteDiv #drawing{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  .firstWhiteDiv h2 {
+    margin: 30px 0px 10px 40px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #232323;
+  }
+  .firstWhiteDiv p {
+    margin: 10px 0 20px 40px;
+    width: 100%;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .firstWhiteDiv article {
+    margin: 40px;
+    width: 90vw;
+    line-height: 1.2rem;
+  }
+  .firstWhiteDiv .border {
+    margin: 20px 0 20px 40px;
+  }
+
+  .btn-cont .btnBlack {
+    left: 0;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projectsDiv {
+    display: block;
+    margin: 40vw 0 50px 0;
+  }
+    .projectsDiv h3 {
+      display: block;
+      margin: 0 auto;
+      font-size: 2.5em; }
+}
+
+@media all and (max-width: 810px)
+{
+  .projectsDiv {
+    display: block;
+    margin: 80vw 0 50px 0;
+  }
+  ::-webkit-scrollbar {
     display: none;
   }
+
+  #rightArrow {
+    position: absolute;
+    position: absolute;
+    z-index: 20000;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 90%;
+    transform: rotate(270deg); }
+
 }
-@media all and (max-width: 478px)
+
+@media all and (max-width: 500px)
 {
   .container {
     width: 100%;
@@ -426,7 +507,7 @@ nav.menu ul li ul {
 
    .homepic {
      min-width: 100vw;
-     min-height: 400px;
+     min-height: 650px;
      transition: all ease-in-out 0.65s;
    }
 
@@ -434,7 +515,7 @@ nav.menu ul li ul {
      margin-top: 50px;
      background: #232323;
      display: inline-block;
-     height: 250px; }
+     height: 500px; }
      .footerTab ul {
        list-style: none;
        color: white; }
@@ -448,7 +529,7 @@ nav.menu ul li ul {
       z-index: 20000;
       width: 50px;
       height: 50px;
-      top: 50%;
+      top: 40%;
       left: 2%;
       transform: rotate(90deg); }
 
@@ -458,8 +539,8 @@ nav.menu ul li ul {
       z-index: 20000;
       width: 50px;
       height: 50px;
-      top: 50%;
-      left: 95%;
+      top: 40%;
+      left: 83%;
       transform: rotate(270deg); }
 
     .firstWhiteDiv {
@@ -487,8 +568,8 @@ nav.menu ul li ul {
         font-style: italic;
       }
       .firstWhiteDiv article {
-        margin: 10px;
-        width: 100vw;
+        margin: 15px;
+        width: 90vw;
         font-weight: 300;
         line-height: 1.2rem;
       }
@@ -497,64 +578,56 @@ nav.menu ul li ul {
         color: #232323;
       }
 
+      .projectsDiv {
+        display: block;
+        margin: 100vw 0 50px 0;
+      }
+
 }
-
-
-@media all and (max-width: 1200px)
+@media all and (min-width: 500px)
 {
-  .container {
-    width: 100%;
-    margin: 0 auto; }
-
-  .firstWhiteDiv {
-  display: block;
-  width: 100%;
-  height: 600px;
+  .menuToggle {
+    display: none;
+  }
 }
-  .firstWhiteDiv #drawing{
+
+@media all and (max-width: 415px)
+{
+  .projectsDiv {
+    display: block;
+    margin: 145vw 0 50px 0;
+  }
+
+  .btn-cont {
+    width: 90vw;
+    margin-left: 20px;
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
   }
-  .firstWhiteDiv h2 {
-    margin: 30px 0px 10px 40px;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #232323;
-  }
-  .firstWhiteDiv p {
-    margin: 10px 0 20px 40px;
-    width: 100%;
-    font-weight: 300;
-    font-style: italic;
-  }
-  .firstWhiteDiv article {
-    margin: 40px;
-    width: 90vw;
-    font-weight: 300;
-    line-height: 1.2rem;
-  }
-  .firstWhiteDiv .border {
-    margin: 20px 0 20px 40px;
-    color: #232323;
-  }
+}
 
-  .btn-cont .btnBlack {
-    left: 0;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+@media all and (max-width: 375px)
+{
   .projectsDiv {
-    margin: 40vw 0 50px 0; }
-    .projectsDiv h3 {
-      display: block;
-      margin: auto;
-      text-transform: uppercase;
-      margin: 0 auto;
-      font-size: 2.5em; }
+    display: block;
+    margin: 190vw 0 50px 0;
+  }
+
+
+}
+@media all and (max-width: 320px)
+{
+  .projectsDiv {
+    display: block;
+    margin: 230vw 0 50px 0;
+  }
+
+  .btn-cont {
+    width: 90vw;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+
 }
